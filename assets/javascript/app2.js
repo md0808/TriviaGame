@@ -22,7 +22,7 @@ var triviaQuestions = [
          "Bingbangboom",
          "Proboonotopotes",],
          correctAnswer : "Prototaxites",
-         image: "img src="
+         image : "https://s-media-cache-ak0.pinimg.com/236x/96/90/d5/9690d5f3f832bf1a891b4a5d52ac30d3--mushroom-fungi-mushrooms.jpg"
         },
 
         {question : 
@@ -33,7 +33,7 @@ var triviaQuestions = [
          "Rosacea", 
          "Athlete’s Foot"],
         correctAnswer : "Rosacea",
-        image: "img src=",
+        image : "http://alighahary.ca/wp-content/uploads/2018/03/ali-ghahary-rosacea-1068x729.jpg",
         },
 
         {question :
@@ -44,7 +44,7 @@ var triviaQuestions = [
         "Turkeytail",
         "Lion's Mane"],
         correctAnswer : "Honey Mushroom",
-        image: "img src=",
+        image : "http://www.kickassfacts.com/wp-content/uploads/2016/08/Honeymushroom.jpg",
         },
 
         {question :
@@ -55,7 +55,7 @@ var triviaQuestions = [
         "Unicorn Tears",
         "Cotton"],
         correctAnswer : "Water",
-        image: "img src="
+        image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/%E9%BB%84%E6%9E%9C%E6%A0%91%E7%80%91%E5%B8%83.jpg/360px-%E9%BB%84%E6%9E%9C%E6%A0%91%E7%80%91%E5%B8%83.jpg"
         },
 
         {question :
@@ -66,7 +66,7 @@ var triviaQuestions = [
         "Craterellus cornucopioides",
         "Psilocybe Cubensis"],
         correctAnswer : "Psilocybe Cubensis",
-        image: "img src=",
+        image: "https://i2q4x8w7.stackpathcdn.com/wp-content/uploads/2015/12/pes-hawaiian-384x252.jpg",
 
     }
  ]
@@ -99,6 +99,7 @@ var game = {
     },
     nextQuestion : function (){
         $("#outcome").html("");
+        $("#image-div").html("");
         game.counter= 30;
         $("#questions").html(" ");
         $("#answers").html(" ");
@@ -112,7 +113,8 @@ var game = {
         $("#questions").html(" ");
         $("#answers").html(" ");
         $("#outcome").html("<h4>Time's Up!</h4>");
-        $("#outcome").append("<h4> The correct answer was: " +triviaQuestions[game.currentQuestion].correctAnswer + "</h4>" )
+        $("#outcome").append("<h4> The correct answer was: " +triviaQuestions[game.currentQuestion].correctAnswer + "</h4>" );
+        $("#image").html("<img id='image' src='" +triviaQuestions[game.currentQuestion].image + "'>");
         game.unanswered++;
         if (game.currentQuestion == triviaQuestions.length-1){
             setTimeout(game.results, 3000);
@@ -128,7 +130,7 @@ var game = {
         clearInterval(timer);
         $("#questions").html(" ");
         $("#answers").html(" ");
-        $("")
+        $("#image-div").html("");
         $("#outcome").html("<h2>Results:</h2>");
         $("#outcome").append("<h4> Number of correct answers: " + game.correct + "</h4>");
         $("#outcome").append("<h4> Number of wrong answers: " + game.incorrect + "</h4>");
@@ -156,6 +158,7 @@ var game = {
         clearInterval(timer);
         game.correct++;
         $("#outcome").html(" <h4> That's right! </h4>");
+        $("#image-div").html("<img id='image' src='" +triviaQuestions[game.currentQuestion].image + "'>");
         if (game.currentQuestion == triviaQuestions.length-1){
             setTimeout(game.results, 3000);
         }
@@ -172,6 +175,7 @@ var game = {
         game.incorrect++;
         $("#outcome").html("<h4>Wrong Answer!</h4>")
         $("#outcome").append("<h4> The correct answer was: " +triviaQuestions[game.currentQuestion].correctAnswer + "</h4>" )
+        $("#image-div").html("<img id='image' src='" +triviaQuestions[game.currentQuestion].image + "'>");
         if (game.currentQuestion == triviaQuestions.length-1){
             setTimeout(game.results, 3000);
         }
