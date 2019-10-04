@@ -1,0 +1,40 @@
+body{
+    background-image: url("http://vdp.almudo.fastmail.us/panos/VDP/November%202013/DSC08014cluster1.JPG");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.container{
+    margin-top: 40px;
+    padding-top: 40px;
+    min-height: 400px;
+    text-align: center;
+    background-color: rgba(80, 80, 80, 0.7);
+    color: white; 
+    border-radius: 15px;
+
+}
+
+button{
+    background-color: rgba(41, 41, 41, 0.918);
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.answer-button {
+margin-right: 20px;
+margin-bottom: 20px;
+}
+
+.row{
+    padding: 12px;
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 640px) {}
