@@ -41,25 +41,24 @@ margin-bottom: 20px;
     padding: 12px;
 }
 
-@media screen and (max-width: 1000px){
-
-}
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
     body {
         background-image: url("http://static.boredpanda.com/blog/wp-content/org_uploads/2014/05/fungi-mushrooms-photography-steve-axford-29__880.jpg");
         background-size: 100%;
 
     }
     .container {
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: 20px, auto;
+       
 
     }
+    [class*="col-"] {
+        width: 100%;
+      }
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     body {
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Laccaria_amethystina_LC0370.jpg/1200px-Laccaria_amethystina_LC0370.jpg");
         background-size: 100%;
