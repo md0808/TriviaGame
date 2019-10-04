@@ -92,7 +92,7 @@ var game = {
         timer = setInterval(game.countdown, 1000);
         $("#questions").html("<h4>" + triviaQuestions[game.currentQuestion].question + "</h4>");
         for (var i =0; i < triviaQuestions[game.currentQuestion].answers.length; i++){
-            $("#answers").append('<button class="answer-button" id="button-'+i+'" "data-name="'+triviaQuestions[game.currentQuestion].answers[i]+'">' 
+            $("#answers").append('<button class="answer-button" id="button-'+i+'" data-name="'+triviaQuestions[game.currentQuestion].answers[i]+'">' 
             +triviaQuestions[game.currentQuestion].answers[i] + '</button>')
         }
 
@@ -123,14 +123,10 @@ var game = {
             setTimeout(game.nextQuestion, 3000);
 
         }
-
-
     },
     results : function () {
         clearInterval(timer);
-        $("#questions").html(" ");
-        $("#answers").html(" ");
-        $("#image-div").html("");
+        $("#time-left, #questions, #answers, #image-div").html(" ");
         $("#outcome").html("<h2>Results:</h2>");
         $("#outcome").append("<h4> Number of correct answers: " + game.correct + "</h4>");
         $("#outcome").append("<h4> Number of wrong answers: " + game.incorrect + "</h4>");
@@ -146,8 +142,9 @@ var game = {
         }
         else {
             game.answeredIncorrectly();
+            console.log($(e.target))
             console.log($(e.target).attr("data-name"));
-            console.log($(e.target).data("name"));
+            console.log($(e.target).data('name'));
         }
         //if $("data-name") of answer button == triviaQuestions[game.CurrentQuestion].correctAnswer]
         

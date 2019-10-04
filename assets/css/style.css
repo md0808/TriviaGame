@@ -10,9 +10,11 @@ body{
     padding-top: 40px;
     min-height: 500px;
     text-align: center;
-    background-color: rgba(80, 80, 80, 0.7);
+    background-color: rgba(80, 80, 80, 0.75);
     color: white; 
     border-radius: 15px;
+    line-height: 120%;
+
 
 }
 
@@ -41,7 +43,7 @@ margin-bottom: 20px;
     padding: 12px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     body {
         background-image: url("http://static.boredpanda.com/blog/wp-content/org_uploads/2014/05/fungi-mushrooms-photography-steve-axford-29__880.jpg");
         background-size: 100%;
