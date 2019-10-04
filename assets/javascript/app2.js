@@ -155,6 +155,7 @@ var game = {
         clearInterval(timer);
         game.correct++;
         $("#outcome").html(" <h4> That's right! </h4>");
+        $("#outcome").append("<h4> The correct is " +triviaQuestions[game.currentQuestion].correctAnswer + "</h4>" )
         $("#image-div").html("<img id='image' src='" +triviaQuestions[game.currentQuestion].image + "'>");
         if (game.currentQuestion == triviaQuestions.length-1){
             setTimeout(game.results, 3000);
