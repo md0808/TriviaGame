@@ -143,16 +143,11 @@ var game = {
         }
         else {
             game.answeredIncorrectly();
-            console.log($(e.target))
-            console.log($(e.target).attr("data-name"));
-            console.log($(e.target).data('name'));
         }
-        //if $("data-name") of answer button == triviaQuestions[game.CurrentQuestion].correctAnswer]
         
 
     },
     answeredCorrectly : function () {
-        console.log("Correctly! It worked!");
         clearInterval(timer);
         game.correct++;
         $("#outcome").html(" <h4> That's right! </h4>");
@@ -169,7 +164,6 @@ var game = {
  
     },
     answeredIncorrectly : function () {
-        console.log ("INCORRECT");
         clearInterval(timer);
         game.incorrect++;
         $("#outcome").html("<h4>Wrong Answer!</h4>")
@@ -186,7 +180,6 @@ var game = {
     },
 
     reset : function () {
-        console.log("reset");
         game.currentQuestion = 0;
         game.counter = 30;
         game.correct = 0;
