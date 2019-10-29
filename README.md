@@ -1,4 +1,7 @@
 # TriviaGame
+
+https://md0808.github.io/TriviaGame/
+
 This is a fungi themed trivia game I created with javascript, jQuery, CSS, and HTML.
 The game moves through a series of multiple choice questions about fungi. The user has 30 seconds to guess the correct answer before moving onto the next question. Score is tallied at the end.
 
