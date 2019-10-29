@@ -81,6 +81,7 @@ var game = {
     incorrect: 0,
     unanswered: 0,
     countdown : function (){
+        $("#seconds-left").show();
         game.counter--;
         $("#time-left").html(game.counter);
         if (game.counter <= 0){
@@ -126,7 +127,7 @@ var game = {
     },
     results : function () {
         clearInterval(timer);
-        $("#time-left, #questions, #answers, #image-div").html(" ");
+        $("#time-left, #questions, #answers, #image-div, #seconds-left").html(" ");
         $("#outcome").html("<h2>Results:</h2>");
         $("#outcome").append("<h4> Number of correct answers: " + game.correct + "</h4>");
         $("#outcome").append("<h4> Number of wrong answers: " + game.incorrect + "</h4>");
